@@ -1,23 +1,31 @@
-## Portfolio
+## Perfil persinal de Christian Gimenez
 
 ---
+### DATOS PERSONALES
 
-### Category Name 1 
+Fecha de nacimiento: 17 de Enero de 1971
+Estado civil: Casado
+Hijos: 1 hermoso niño de 6 años
+
+[Ejemplo de pagina](/sample_page)
+<img src="images/dummy_thumbnail.jpg?raw=true"/>
+
+---
+### FORMACION ACADEMICA
 
 [Ejemplo de pagina](/sample_page)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
 [Ejemplo de PDF](/pdf/sample_presentation.pdf)
+
+---
+[Ejemplo de redireccion](http://uade.edu.ar)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
-[Ejemplo de redireccion](http://example.com/)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
 
----
-
-### Category Name 2
+### PROYECTOS PERSONALES
 
 - [Project 1 Title](http://example.com/)
 - [Project 2 Title](http://example.com/)
