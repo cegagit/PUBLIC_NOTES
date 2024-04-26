@@ -10,5 +10,6 @@ cpl0309
 tcgsoc
 #tcgh
 
-Christian Eduardo
+Christian Eduardo Gimenez Arrillaga
+
 56890883
