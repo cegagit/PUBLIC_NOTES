@@ -7,7 +7,7 @@ Nombre completo: Christian Eduardo Gimenez Arrillaga
 <br>DNI: 21.954.983
 <br>Fecha de nacimiento: 17 de Enero de 1971
 <br>Estado civil: Casado
-<br>Hijos: 1 hermoso niño de 6 años
+<br>Hijos: Marcos, un hermoso niño de 6 años
 <br>Lugar de residencia: Flores, Caba, Argentina
 <br>Telefono: +54-11-3125-5055
 <br><img src="images/foto_familiar.jpg?raw=true"/>
