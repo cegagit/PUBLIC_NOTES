@@ -14,8 +14,7 @@ Nombre completo: Christian Eduardo Gimenez Arrillaga
 ---
 ### FORMACION ACADEMICA
 <br>
-
-|Titulo|Periodo|Institucion|
+|TITULO|PERIODO|INSTITUCION|
 |--------|--------|------|
 | **Perito Mercantil** | 1984/1988 | Escuela Sup. de Comercio C. Pellegrini |
 | **Senior Diploma of Capacity - Profesor de Ingles** | 1980/1987 | Instituto Argentino de Cultura Inglesa |
@@ -76,19 +75,18 @@ Tareas realizadas como Administrador de redes:
 - [Projecto 2 ](http://github.com/cegagit/myprojects/python/textprocessing/) 
 - [Projecto 3 ](http://github.com/cegagit/myprojects/cpp/textprocessing/)
 
----
-### OTRA INFORMACION / PRUEBAS
-
+-----
+### OTRA INFORMACION - PRUEBAS
 [Ejemplo de pagina](/sample_page)
----
+-----
 [Ejemplo de Markdown](/MDexample)
----
+-----
 Ejemplo de Imagen
 <br><img src="images/dummy_thumbnail.jpg?raw=true"/>
----
+-----
 [Ejemplo de PDF](/pdf/sample_presentation.pdf)
----
+-----
 [Ejemplo de redireccion](http://uade.edu.ar)
----
+-----
 <p style="font-size:11px">Page template forked from <a href="https://github.com/evanca/quick-portfolio">evanca</a></p>
 <!-- Comentario que no se ve -->
