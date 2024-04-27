@@ -14,8 +14,9 @@ Nombre completo: Christian Eduardo Gimenez Arrillaga
 ---
 ### FORMACION ACADEMICA
 <br>
-|TITULO|PERIODO|INSTITUCION|
-|--------|--------|------|
+| -------- | -------- | ------ |
+| TITULO | PERIODO | INSTITUCION |
+| -------- | -------- | ------ |
 | **Perito Mercantil** | 1984/1988 | Escuela Sup. de Comercio C. Pellegrini |
 | **Senior Diploma of Capacity - Profesor de Ingles** | 1980/1987 | Instituto Argentino de Cultura Inglesa |
 | **Analista en informática** | 1992/1997 | Universidad Arg. de la Empresa (UADE) |
@@ -23,6 +24,9 @@ Nombre completo: Christian Eduardo Gimenez Arrillaga
 
 ---
 ### FORMACION ADICIONAL
+| -------- | -------- | ------ |
+| TITULO | PERIODO | INSTITUCION |
+| -------- | -------- | ------ |
 Ingeniero en redes Microsoft NT 4 (MCSE –ID: 905050)	11/1997		Microsoft Inc. U.S.A.
 Microsoft NT Workstation 4 Product Specialist (MCP)	10/1997		Microsoft Inc. U.S.A.
 Microsoft NT Server 4 Product Specialist (MCP)		10/1997		Microsoft Inc. U.S.A.
