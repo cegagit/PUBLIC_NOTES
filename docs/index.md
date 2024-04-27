@@ -1,5 +1,3 @@
-##   
-
 ### DATOS PERSONALES
 
 Nombre completo: Christian Eduardo Gimenez Arrillaga
@@ -21,14 +19,14 @@ Nombre completo: Christian Eduardo Gimenez Arrillaga
 | **Analista en informática** | 1992-1997 | Universidad Arg. de la Empresa (UADE) |
 | **Master en dirección de empresas** | 1998-1999 |Universidad del CEMA |
 
----
 ### FORMACION ADICIONAL
+
 | -------- | -------- | ------ |
 | TITULO | PERIODO | INSTITUCION |
 | -------- | -------- | ------ |
-Ingeniero en redes Microsoft NT 4 (MCSE –ID: 905050)	11/1997		Microsoft Inc. U.S.A.
-Microsoft NT Workstation 4 Product Specialist (MCP)	10/1997		Microsoft Inc. U.S.A.
-Microsoft NT Server 4 Product Specialist (MCP)		10/1997		Microsoft Inc. U.S.A.
+Ingeniero en redes Microsoft NT 4 (MCSE) | 11/1997 | Microsoft Inc. U.S.A.
+Microsoft NT Workstation 4 Product Specialist (MCP) | 10/1997 | Microsoft Inc. U.S.A.
+Microsoft NT Server 4 Product Specialist (MCP) | 10/1997 | Microsoft Inc. U.S.A.
 Microsoft Exchange Server 5 Product Specialist (MCP)	11/1997		Microsoft Inc. U.S.A.
 Ingeniero en redes Novell Netware 4 (CNE –ID: 6579371)	7/1996		Novell Inc. U.S.A.
 Administrador de redes Novell Netware 4 (CNA)		1/1996		Novell Inc. U.S.A.
