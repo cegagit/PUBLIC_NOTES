@@ -1,6 +1,5 @@
-## 
+##   
 
----
 ### DATOS PERSONALES
 
 Nombre completo: Christian Eduardo Gimenez Arrillaga
@@ -11,16 +10,16 @@ Nombre completo: Christian Eduardo Gimenez Arrillaga
 <br>Lugar de residencia: Flores, Caba, Argentina
 <br>Telefono: +54-11-3125-5055
 <br><img src="images/foto_familiar.jpg?raw=true"/>
----
+
 ### FORMACION ACADEMICA
-<br>
+
 | -------- | -------- | ------ |
 | TITULO | PERIODO | INSTITUCION |
 | -------- | -------- | ------ |
-| **Perito Mercantil** | 1984/1988 | Escuela Sup. de Comercio C. Pellegrini |
+| **Perito Mercantil** | 1984-1988 | Escuela Sup. de Comercio C. Pellegrini |
 | **Senior Diploma of Capacity - Profesor de Ingles** | 1980/1987 | Instituto Argentino de Cultura Inglesa |
-| **Analista en informática** | 1992/1997 | Universidad Arg. de la Empresa (UADE) |
-| **Master en dirección de empresas** | 1998/1999 |Universidad del CEMA |
+| **Analista en informática** | 1992-1997 | Universidad Arg. de la Empresa (UADE) |
+| **Master en dirección de empresas** | 1998-1999 |Universidad del CEMA |
 
 ---
 ### FORMACION ADICIONAL
