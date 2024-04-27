@@ -14,19 +14,13 @@ Nombre completo: Christian Eduardo Gimenez Arrillaga
 
 ---
 ### FORMACION ACADEMICA
-
+<br>
 | Titulo   |  Periodo     | Institucion   | 
 | --------  | -------- | ------ | 
 | **Perito Mercantil	** | 1984/1988 | Escuela Sup. de Comercio C. Pellegrini | 
-| **italics** | bold | code | 
-| **italics** | bold | code | 
-
-
-Perito Mercantil			1984/1988	Escuela Sup. de Comercio C. Pellegrini
-Diploma superior de capacidad	1980/1987	Instituto Argentino de Cultura Inglesa
-						(Nivel avanzado de idioma inglés)
-Analista en informática		1992/1997	Universidad Arg. de la Empresa (UADE)
-Master en dirección de empresas	1998/1999	Universidad del CEMA
+| **Senior Diploma of Capacity - Profesor de Ingles** | 1980/1987 | Instituto Argentino de Cultura Inglesa | 
+| **Analista en informática** | 1992/1997 | Universidad Arg. de la Empresa (UADE) | 
+| **Master en dirección de empresas** | 1998/1999 | Universidad del CEMA |
 
 ---
 ### FORMACION ADICIONAL
@@ -86,12 +80,14 @@ Tareas realizadas como Administrador de redes:
 ### OTRA INFORMACION / PRUEBAS
 
 [Ejemplo de pagina](/sample_page)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+---
+[Ejemplo de Markdown](/MDexample)
+---
+[Ejemplo de Imagen]<img src="images/dummy_thumbnail.jpg?raw=true"/>
 ---
 [Ejemplo de PDF](/pdf/sample_presentation.pdf)
 ---
 [Ejemplo de redireccion](http://uade.edu.ar)
-
 ---
 <p style="font-size:11px">Page template forked from <a href="https://github.com/evanca/quick-portfolio">evanca</a></p>
 <!-- Remove above link if you don't want to attibute -->
