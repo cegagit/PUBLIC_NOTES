@@ -15,9 +15,12 @@ Nombre completo: Christian Eduardo Gimenez Arrillaga
 ---
 ### FORMACION ACADEMICA
 
-| Italics   | Bold     | Code   | 
+| Titulo   |  Periodo     | Institucion   | 
 | --------  | -------- | ------ | 
+| **Perito Mercantil	** | 1984/1988 | Escuela Sup. de Comercio C. Pellegrini | 
 | **italics** | bold | code | 
+| **italics** | bold | code | 
+
 
 Perito Mercantil			1984/1988	Escuela Sup. de Comercio C. Pellegrini
 Diploma superior de capacidad	1980/1987	Instituto Argentino de Cultura Inglesa
