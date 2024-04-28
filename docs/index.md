@@ -24,15 +24,14 @@ Nombre completo: Christian Eduardo Gimenez Arrillaga
 | -------- | -------- | ------ |
 | TITULO | PERIODO | INSTITUCION |
 | -------- | -------- | ------ |
-Ingeniero en redes Microsoft NT 4 (MCSE) | 11/1997 | Microsoft Inc. U.S.A.
-Microsoft NT Workstation 4 Product Specialist (MCP) | 10/1997 | Microsoft Inc. U.S.A.
-Microsoft NT Server 4 Product Specialist (MCP) | 10/1997 | Microsoft Inc. U.S.A.
-Microsoft Exchange Server 5 Product Specialist (MCP)	11/1997		Microsoft Inc. U.S.A.
-Ingeniero en redes Novell Netware 4 (CNE –ID: 6579371)	7/1996		Novell Inc. U.S.A.
-Administrador de redes Novell Netware 4 (CNA)		1/1996		Novell Inc. U.S.A.
-Administrador de redes Novell Netware 3 (CNA)		12/1995		Novell Inc. U.S.A.
+| Ingeniero en redes Microsoft NT 4 (MCSE) | 11/1997 | Microsoft Inc. U.S.A. |
+| Microsoft NT Workstation 4 Product Specialist (MCP) | 10/1997 | Microsoft Inc. U.S.A. |
+| Microsoft NT Server 4 Product Specialist (MCP) | 10/1997 | Microsoft Inc. U.S.A. |
+| Microsoft Exchange Server 5 Product Specialist (MCP)	11/1997		Microsoft Inc. U.S.A. |
+| Ingeniero en redes Novell Netware 4 (CNE –ID: 6579371)	7/1996		Novell Inc. U.S.A. |
+| Administrador de redes Novell Netware 4 (CNA)		1/1996		Novell Inc. U.S.A. |
+| Administrador de redes Novell Netware 3 (CNA)		12/1995		Novell Inc. U.S.A. |
 
----
 ### EXPERIENCIA LABORAL
 
 #### Ernst & Young Argentina	1998/2002 (actualidad)
@@ -69,25 +68,24 @@ Tareas realizadas como Administrador de redes:
 - Migración de plataformas de 16 a 32 bits (NT Workstation 4, Windows 95 y Office 97)
 - Instalación, administración de seguridad, tunning y troubleshooting de servidores Novell Netware 3.x/4.x, Microsoft NT Server 3.51/4 y OS/2 Warp Server.
 
----
 ### PROYECTOS PERSONALES
 
 - [Data Sciense Helper - Chrome Extension in Javascript ](http://github.com/cegagit/myprojects/javascript/textprocessing/)
 - [Projecto 2 ](http://github.com/cegagit/myprojects/python/textprocessing/) 
 - [Projecto 3 ](http://github.com/cegagit/myprojects/cpp/textprocessing/)
 
------
 ### OTRA INFORMACION - PRUEBAS
+
 [Ejemplo de pagina](/sample_page)
------
+  
 [Ejemplo de Markdown](/MDexample)
------
+  
 Ejemplo de Imagen
 <br><img src="images/dummy_thumbnail.jpg?raw=true"/>
------
+  
 [Ejemplo de PDF](/pdf/sample_presentation.pdf)
------
+  
 [Ejemplo de redireccion](http://uade.edu.ar)
------
+  
 <p style="font-size:11px">Page template forked from <a href="https://github.com/evanca/quick-portfolio">evanca</a></p>
 <!-- Comentario que no se ve -->
