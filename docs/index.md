@@ -76,7 +76,8 @@ Tareas realizadas como Administrador de redes:
 
 ### **PROYECTOS PERSONALES**
 
-- [Data Sciense Helper - Chrome Extension in Javascript ](https://github.com/cegagit/cegagit.github.io/tree/main/mycode/javascript/datasciencehelper)
+- [Data Sciense Helper - Chrome Extension in Javascript](https://github.com/cegagit/cegagit.github.io/tree/main/mycode/javascript/datasciencehelper)
+[live demo](/demos/datasciencehelper.html)
 - [Projecto 2 ](/sample_page)
 - [Projecto 3 ](/sample_page)
 
