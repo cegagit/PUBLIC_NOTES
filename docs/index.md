@@ -1,4 +1,4 @@
-### **DATOS PERSONALES**
+### **PERSONAL DATA**
 
 Nombre completo: Christian Eduardo Gimenez Arrillaga
 <br>DNI: 21.954.983
@@ -11,7 +11,7 @@ Nombre completo: Christian Eduardo Gimenez Arrillaga
 
 ____
 
-### **FORMACION ACADEMICA**
+### **ACADEMIC FORMATION**
 
 | TITULO | PERIODO | INSTITUCION |
 | -------- | -------- | ------ |
@@ -20,7 +20,7 @@ ____
 | Analista en informática | 1992-1997 | Universidad Arg. de la Empresa (UADE) |
 | Master en dirección de empresas | 1998-1999 |Universidad del CEMA |
 
-### **FORMACION ADICIONAL**
+### **ADITIONAL STUDIES**
 
 | TITULO | PERIODO | INSTITUCION |
 | -------- | -------- | ------ |
@@ -32,7 +32,7 @@ ____
 | Administrador de redes Novell Netware 4 (CNA) | 1/1996 | Novell Inc. U.S.A. |
 | Administrador de redes Novell Netware 3 (CNA) | 12/1995 | Novell Inc. U.S.A. |
 
-### **EXPERIENCIA LABORAL**
+### **PREVIOUS JOB EXPERIENCES**
 
 #### Ernst & Young Argentina	1998/2002 (actualidad)
 Tareas realizadas como Jefe de redes y comunicaciones, con personal a cargo,  en la Gerencia de sistemas:
@@ -70,26 +70,12 @@ Tareas realizadas como Administrador de redes:
 
 ***
 
-### **PROYECTOS PERSONALES**
+### **PERSONAL PROJECTS**
 
-- [Data Sciense Helper - Chrome Extension in Javascript](https://github.com/cegagit/cegagit.github.io/tree/main/mycode/javascript/datasciencehelper)  
-[live demo](/demos/datasciencehelper.html)
-- [Projecto 2 ](/sample_page)
-- [Projecto 3 ](/sample_page)
-
----
-
-### **OTRA INFORMACION - PRUEBAS**
-
-[Ejemplo de Markdown](/MDexample)
-  
-Ejemplo de Imagen
-<br><img src="images/dummy_thumbnail.jpg?raw=true"/>
-  
-[Ejemplo de PDF para descargar](/pdf/sample_presentation.pdf)
-  
-[Ejemplo de redireccion a otro sitio](http://uade.edu.ar)
-  
-<p style="font-size:11px">Ejemplo de pie de pagina y propaganda <a href="https://github.com/evanca/quick-portfolio">evanca</a></p>
-
-<!-- Ejemplo de comentario que no se ve -->
+- Data Sciense Helper - Chrome Extension in Javascript  
+[Info](/dshproject)  
+[Source code](https://github.com/cegagit/cegagit.github.io/tree/main/mycode/javascript/datasciencehelper)  
+[Live demo](/demos/datasciencehelper.html)
+- Project 2
+- Project 3
+- Project 4
