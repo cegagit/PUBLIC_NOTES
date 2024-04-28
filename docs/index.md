@@ -7,19 +7,19 @@ Estado civil: Casado
 Hijos: Marcos, un hermoso niño de 6 años  
 Lugar de residencia: Flores, Caba, Argentina  
 Telefono: +54-11-3125-5055  
-<img src="images/foto_familiar.jpg" width="30" />
+<img src="images/foto_familiar.jpg" width="150" />
 ____
 
 ### **ACADEMIC FORMATION**
 
-| TITULO | PERIODO | INSTITUCION |
+| TITLE | PERIOD | INSTITUTION |
 | -------- | -------- | ------ |
 | Perito Mercantil | 1984-1988 | Escuela Sup. de Comercio C. Pellegrini |
 | Senior Diploma of Capacity - Profesor de Ingles | 1980/1987 | Instituto Argentino de Cultura Inglesa |
 | Analista en informática | 1992-1997 | Universidad Arg. de la Empresa (UADE) |
 | Master en dirección de empresas | 1998-1999 |Universidad del CEMA |
 
-### **ADITIONAL STUDIES**
+### **ADITIONAL FORMATION**
 
 | TITULO | PERIODO | INSTITUCION |
 | -------- | -------- | ------ |
