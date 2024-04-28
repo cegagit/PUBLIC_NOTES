@@ -20,8 +20,6 @@ ____
 | Analista en informática | 1992-1997 | Universidad Arg. de la Empresa (UADE) |
 | Master en dirección de empresas | 1998-1999 |Universidad del CEMA |
 
----
-
 ### **FORMACION ADICIONAL**
 
 | TITULO | PERIODO | INSTITUCION |
@@ -33,8 +31,6 @@ ____
 | Ingeniero en redes Novell Netware 4 (CNE) | 7/1996 | Novell Inc. U.S.A. |
 | Administrador de redes Novell Netware 4 (CNA) | 1/1996 | Novell Inc. U.S.A. |
 | Administrador de redes Novell Netware 3 (CNA) | 12/1995 | Novell Inc. U.S.A. |
-
-----------
 
 ### **EXPERIENCIA LABORAL**
 
@@ -76,7 +72,7 @@ Tareas realizadas como Administrador de redes:
 
 ### **PROYECTOS PERSONALES**
 
-- [Data Sciense Helper - Chrome Extension in Javascript](https://github.com/cegagit/cegagit.github.io/tree/main/mycode/javascript/datasciencehelper)
+- [Data Sciense Helper - Chrome Extension in Javascript](https://github.com/cegagit/cegagit.github.io/tree/main/mycode/javascript/datasciencehelper)  
 [live demo](/demos/datasciencehelper.html)
 - [Projecto 2 ](/sample_page)
 - [Projecto 3 ](/sample_page)
