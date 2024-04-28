@@ -1,4 +1,4 @@
-# # Hello, you have reached the public repository of Christian Gimenez
+# Hello, you have reached the public repository of Christian Gimenez
 
 ## You can visit my personal site at:
 
