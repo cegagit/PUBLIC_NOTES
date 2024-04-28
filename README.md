@@ -4,8 +4,11 @@
 [https://cegagit.github.io](https://cegagit.github.io)
 
 ### In this repository you will find:
-<br>/docs - All data, files and styling of my personal web site
-<br>/mycode - All my snippets, programs, data and full projects
-<br>/notes - All my notes, and other people's notes related to several themes of my interest
-<br>
+
+| DIRECTORY | DESCRIPTION |
+| -------- | ------ |
+| /docs | All data, files and styling of my personal web site |
+| /mycode | All my snippets, programs, and full projects with related data |
+| /notes | All my notes (and other people's notes) related to several themes of personal interest |
+
 ### I hope you enjoy it and thanks for visiting !!!
