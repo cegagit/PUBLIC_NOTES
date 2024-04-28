@@ -9,9 +9,8 @@ Nombre completo: Christian Eduardo Gimenez Arrillaga
 <br>Telefono: +54-11-3125-5055
 <br><img src="images/foto_familiar.jpg?raw=true"/>
 
-### FORMACION ACADEMICA
+### **FORMACION ACADEMICA**
 
-| -------- | -------- | ------ |
 | TITULO | PERIODO | INSTITUCION |
 | -------- | -------- | ------ |
 | **Perito Mercantil** | 1984-1988 | Escuela Sup. de Comercio C. Pellegrini |
@@ -27,10 +26,10 @@ Nombre completo: Christian Eduardo Gimenez Arrillaga
 | Ingeniero en redes Microsoft NT 4 (MCSE) | 11/1997 | Microsoft Inc. U.S.A. |
 | Microsoft NT Workstation 4 Product Specialist (MCP) | 10/1997 | Microsoft Inc. U.S.A. |
 | Microsoft NT Server 4 Product Specialist (MCP) | 10/1997 | Microsoft Inc. U.S.A. |
-| Microsoft Exchange Server 5 Product Specialist (MCP)	11/1997		Microsoft Inc. U.S.A. |
-| Ingeniero en redes Novell Netware 4 (CNE –ID: 6579371)	7/1996		Novell Inc. U.S.A. |
-| Administrador de redes Novell Netware 4 (CNA)		1/1996		Novell Inc. U.S.A. |
-| Administrador de redes Novell Netware 3 (CNA)		12/1995		Novell Inc. U.S.A. |
+| Microsoft Exchange Server 5 Product Specialist (MCP) | 11/1997 | Microsoft Inc. U.S.A. |
+| Ingeniero en redes Novell Netware 4 (CNE) | 7/1996 | Novell Inc. U.S.A. |
+| Administrador de redes Novell Netware 4 (CNA) | 1/1996 | Novell Inc. U.S.A. |
+| Administrador de redes Novell Netware 3 (CNA) | 12/1995 | Novell Inc. U.S.A. |
 
 ### EXPERIENCIA LABORAL
 
