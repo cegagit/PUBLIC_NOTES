@@ -9,7 +9,7 @@ Nombre completo: Christian Eduardo Gimenez Arrillaga
 <br>Telefono: +54-11-3125-5055
 <br><img src="images/foto_familiar.jpg?raw=true"/>
 
----
+____
 
 ### **FORMACION ACADEMICA**
 
@@ -34,7 +34,7 @@ Nombre completo: Christian Eduardo Gimenez Arrillaga
 | Administrador de redes Novell Netware 4 (CNA) | 1/1996 | Novell Inc. U.S.A. |
 | Administrador de redes Novell Netware 3 (CNA) | 12/1995 | Novell Inc. U.S.A. |
 
----
+----------
 
 ### **EXPERIENCIA LABORAL**
 
@@ -72,7 +72,7 @@ Tareas realizadas como Administrador de redes:
 - Migración de plataformas de 16 a 32 bits (NT Workstation 4, Windows 95 y Office 97)
 - Instalación, administración de seguridad, tunning y troubleshooting de servidores Novell Netware 3.x/4.x, Microsoft NT Server 3.51/4 y OS/2 Warp Server.
 
----
+***
 
 ### **PROYECTOS PERSONALES**
 
@@ -84,8 +84,6 @@ Tareas realizadas como Administrador de redes:
 
 ### **OTRA INFORMACION - PRUEBAS**
 
-[Ejemplo de pagina](/sample_page)
-  
 [Ejemplo de Markdown](/MDexample)
   
 Ejemplo de Imagen
