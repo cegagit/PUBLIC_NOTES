@@ -1,4 +1,4 @@
-### DATOS PERSONALES
+### **DATOS PERSONALES**
 
 Nombre completo: Christian Eduardo Gimenez Arrillaga
 <br>DNI: 21.954.983
@@ -13,12 +13,12 @@ Nombre completo: Christian Eduardo Gimenez Arrillaga
 
 | TITULO | PERIODO | INSTITUCION |
 | -------- | -------- | ------ |
-| **Perito Mercantil** | 1984-1988 | Escuela Sup. de Comercio C. Pellegrini |
-| **Senior Diploma of Capacity - Profesor de Ingles** | 1980/1987 | Instituto Argentino de Cultura Inglesa |
-| **Analista en informática** | 1992-1997 | Universidad Arg. de la Empresa (UADE) |
-| **Master en dirección de empresas** | 1998-1999 |Universidad del CEMA |
+| Perito Mercantil | 1984-1988 | Escuela Sup. de Comercio C. Pellegrini |
+| Senior Diploma of Capacity - Profesor de Ingles | 1980/1987 | Instituto Argentino de Cultura Inglesa |
+| Analista en informática | 1992-1997 | Universidad Arg. de la Empresa (UADE) |
+| Master en dirección de empresas | 1998-1999 |Universidad del CEMA |
 
-### FORMACION ADICIONAL
+### **FORMACION ADICIONAL**
 
 | -------- | -------- | ------ |
 | TITULO | PERIODO | INSTITUCION |
@@ -31,7 +31,7 @@ Nombre completo: Christian Eduardo Gimenez Arrillaga
 | Administrador de redes Novell Netware 4 (CNA) | 1/1996 | Novell Inc. U.S.A. |
 | Administrador de redes Novell Netware 3 (CNA) | 12/1995 | Novell Inc. U.S.A. |
 
-### EXPERIENCIA LABORAL
+### **EXPERIENCIA LABORAL**
 
 #### Ernst & Young Argentina	1998/2002 (actualidad)
 Tareas realizadas como Jefe de redes y comunicaciones, con personal a cargo,  en la Gerencia de sistemas:
@@ -67,13 +67,13 @@ Tareas realizadas como Administrador de redes:
 - Migración de plataformas de 16 a 32 bits (NT Workstation 4, Windows 95 y Office 97)
 - Instalación, administración de seguridad, tunning y troubleshooting de servidores Novell Netware 3.x/4.x, Microsoft NT Server 3.51/4 y OS/2 Warp Server.
 
-### PROYECTOS PERSONALES
+### **PROYECTOS PERSONALES**
 
 - [Data Sciense Helper - Chrome Extension in Javascript ](http://github.com/cegagit/myprojects/javascript/textprocessing/)
 - [Projecto 2 ](http://github.com/cegagit/myprojects/python/textprocessing/) 
 - [Projecto 3 ](http://github.com/cegagit/myprojects/cpp/textprocessing/)
 
-### OTRA INFORMACION - PRUEBAS
+### **OTRA INFORMACION - PRUEBAS**
 
 [Ejemplo de pagina](/sample_page)
   
