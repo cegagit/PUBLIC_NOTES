@@ -1,6 +1,6 @@
 ---
 created: 2024-04-28T00:52:30-03:00
-modified: 2024-04-28T00:53:51-03:00
+modified: 2024-04-28T00:55:26-03:00
 ---
 
 # El caldo de huevo que ayuda a bajar de peso y es una excelente fuente de proteínas
@@ -63,19 +63,5 @@ Caldo de huevo
 4.  Colocar los trozos de huevo y la cebolla en un tazón grande. Agrega el cilantro picado y sazonar con sal al gusto.
 5.  Volver a colocar los trozos de huevo y la cebolla en la olla con el agua caliente. Deja que se cocinen a fuego lento durante unos 5 minutos más, para que los sabores se mezclen.
 6.  Servir el caldo caliente en tazones individuales y disfruta de esta reconfortante y nutritiva sopa de huevo.
-
-Temas relacionados
-
--   [caldo](chrome-extension://pcmpcfapbekmbjjkdalcgopdkipoggdi/tema/122047/)
--   [alimentación saludable](chrome-extension://pcmpcfapbekmbjjkdalcgopdkipoggdi/tema/alimentacion-saludable/)
--   [Huevo](chrome-extension://pcmpcfapbekmbjjkdalcgopdkipoggdi/tema/huevo/)
--   [Dieta](chrome-extension://pcmpcfapbekmbjjkdalcgopdkipoggdi/tema/dieta/)
--   [Salud](chrome-extension://pcmpcfapbekmbjjkdalcgopdkipoggdi/tema/salud/)
--   [nutrición](chrome-extension://pcmpcfapbekmbjjkdalcgopdkipoggdi/tema/nutricion/)
--   [Sopa](chrome-extension://pcmpcfapbekmbjjkdalcgopdkipoggdi/tema/sopa/)
-
-Jueves, 25 de abril de 2024
-
-Jueves, 25 de abril de 2024
 
 ![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAoAAAAHgAQMAAAAPH06nAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAD1JREFUeJztwQENAAAAwqD3T20ON6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4M8Al+AAAfQ5dkcAAAAASUVORK5CYII=)
