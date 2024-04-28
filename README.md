@@ -8,7 +8,7 @@
 
 | DIRECTORY | DESCRIPTION |
 | -------- | ------ |
-| /docs | All data, files and styling of my personal web site |
+| /docs | All data, files, demos and styling of my personal web site |
 | /mycode | All my snippets, programs and full projects with related data |
 | /notes | All my notes (and other people's notes) related to several themes of personal interest |
 
