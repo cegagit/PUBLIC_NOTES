@@ -1,9 +1,9 @@
 ---
 created: 2024-04-28T00:39:15-03:00
-modified: 2024-04-28T00:39:32-03:00
+modified: 2024-04-28T00:39:44-03:00
 ---
 
-# Lenovo Ryzen 7 7735hs 32gb 1tb Ssd 15.6´ 120hz Rtx 4050 Win  Envío gratis
+# Lenovo Ryzen 7 7735hs 32gb 1tb Ssd 15.6´ 120hz Rtx 4050
 
 Somos NORDITECH  
 Lider en Tecnologia
