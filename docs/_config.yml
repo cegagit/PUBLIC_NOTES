@@ -1,11 +1,12 @@
-title: John Doe # your name (or website title) here
+title: Christian Gimenez # your name (or website title) here
 logo: "/images/logo.png?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
-  First description 
+  Padre de Familia 
   <br><br>
-  Second description 
+  Ingeniero en Sistemas 
   <br><br>
   <a href="https://www.linkedin.com/in/example/">View My LinkedIn Profile</a> 
+  <a href="https://www.facebook.com/in/example/">View My Facebook Profile</a> 
   
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
