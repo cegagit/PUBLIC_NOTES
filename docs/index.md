@@ -7,7 +7,7 @@ Estado civil: Casado
 Hijos: Marcos, un hermoso niño de 6 años  
 Lugar de residencia: Flores, Caba, Argentina  
 Telefono: +54-11-3125-5055  
-<img src="images/foto_familiar.jpg" width="150" />
+<img src="images/foto_familiar.jpg" width="200" />
 ____
 
 ### **ACADEMIC FORMATION**
