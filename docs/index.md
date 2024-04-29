@@ -1,4 +1,4 @@
-### **PERSONAL DATA**
+### **PERSONAL INFO**
 
 Nombre completo: Christian Eduardo Gimenez Arrillaga  
 DNI: 21.954.983  
@@ -23,7 +23,7 @@ ____
 
 ### **ADITIONAL FORMATION**
 
-| TITULO | PERIODO | INSTITUCION |
+| TITLE | PERIOD | INSTITUTION |
 | -------- | -------- | ------ |
 | Ingeniero en redes Microsoft NT 4 (MCSE) | 11/1997 | Microsoft Inc. U.S.A. |
 | Microsoft NT Workstation 4 Product Specialist (MCP) | 10/1997 | Microsoft Inc. U.S.A. |
@@ -33,7 +33,7 @@ ____
 | Administrador de redes Novell Netware 4 (CNA) | 1/1996 | Novell Inc. U.S.A. |
 | Administrador de redes Novell Netware 3 (CNA) | 12/1995 | Novell Inc. U.S.A. |
 
-### **PREVIOUS JOB EXPERIENCES**
+### **PREVIOUS JOB EXPERIENCE**
 
 #### Ernst & Young Argentina	1998/2002 (actualidad)
 Tareas realizadas como Jefe de redes y comunicaciones, con personal a cargo,  en la Gerencia de sistemas:
