@@ -79,7 +79,7 @@ Tareas realizadas como Administrador de redes:
 [Live demo](/demos/javascript/datasciencehelper/datasciencehelper.html)
 - Project 2
 [Info](/test1)  
-[Source code](https://github.com/cegagit/cegagit.github.io/tree/main/mycode/python/test1)  
+[Source code](https://github.com/cegagit/cegagit.github.io/tree/main/mycode/python/tests)  
 [Live demo](/demos/python/test1/tutorial3.ipynb)
 - Project 3
 - Project 4
