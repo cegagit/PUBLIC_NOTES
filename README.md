@@ -12,4 +12,4 @@
 | /mycode | All my snippets, programs and full projects with related data |
 | /notes | All my notes (and other people's notes) related to several themes of personal interest |
 
-### I hope you enjoy it and thanks for visiting !!!
+### I hope you enjoy it and thanks for visiting !!!!
