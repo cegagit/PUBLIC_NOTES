@@ -76,7 +76,7 @@ Tareas realizadas como Administrador de redes:
 - Data Sciense Helper - Chrome Extension in Javascript  
 [Info](/dshproject)  
 [Source code](https://github.com/cegagit/cegagit.github.io/tree/main/mycode/javascript/datasciencehelper)  
-[Live demo](/demos/datasciencehelper.html)
+[Live demo](/demos/javascript/datasciencehelper/datasciencehelper.html)
 - Project 2
 - Project 3
 - Project 4
