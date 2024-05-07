@@ -1,3 +1,5 @@
+#tcgbs #note #tcge
+
 -   If you are looking for a new way to parent your kids that feels good for both you and them, you might want to check out Good Inside: A Guide to Becoming the Parent You Want to Be by Becky Kennedy. This book will show you how to connect with your kids over correcting them, how to respond rather than react, and how to coach rather than control.
 -   To learn more about this book and how it can help you transform your parenting experience, read on for a comprehensive summary and review of its main ideas and strategies.
 
