@@ -1,3 +1,5 @@
+#tcgbs #note #tcge
+
 ___
 
 Raising a child is a rewarding journey like nothing else, but that doesn’t necessarily imply that often it can’t get difficult. It can be hard to know to what degree you should let them voice themselves openly and when you should take action when it comes to raising kids. 
