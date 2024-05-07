@@ -1,3 +1,4 @@
+#tcgbs #note #tcge
 
 Raising mentally strong kids who are equipped to take on real-world challenges requires parents to give up the unhealthy — yet popular — parenting practices that are robbing kids of mental strength.
 
