@@ -6,7 +6,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.25.1/full/pyodide.js"></script>
     <script type="text/javascript">
       async function main() {
-        let pyodide = await loadPyodide({ fullStdLib : true })
+        let pyodide = await loadPyodide();
         await pyodide.loadPackage("micropip");
         const micropip = pyodide.pyimport("micropip");
         await micropip.install("snowballstemmer");
