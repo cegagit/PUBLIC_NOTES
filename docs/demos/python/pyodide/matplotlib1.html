@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"></meta>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.18.1/full/pyodide.js"></script>
+      <script type="text/javascript">
+          async function main() {
+
+              let pyodide = await loadPyodide({
+                  indexURL: "https://cdn.jsdelivr.net/pyodide/v0.18.1/full/",
+              });
+
+              await pyodide.loadPackage(["matplotlib", "numpy"]);
+
+              await pyodide.runPythonAsync(`
+import numpy as np
+from matplotlib import pyplot as plt
+from js import document
+x = np.linspace(0, 2*np.pi, 100)
+y = np.sin(x)
+f = plt.figure()
+plt.plot(x,y)
+# ordinary function to create a div
+def create_root_element1():
+    div = document.createElement('div')
+    document.body.appendChild(div)
+    return div
+    return document.getElementById('figure1')
+#override create_root_element method of canvas by one of the functions above
+f.canvas.create_root_element = create_root_element1
+f.canvas.show()`);
+          }
+          main();
+      </script>
+  </head>
+  <body>
+  <h1>pyodide matplotlib test</h1>
+  </body>
+</html>
