@@ -81,8 +81,10 @@ Tareas realizadas como Administrador de redes:
 [Info](/test1)  
 [Source code](https://github.com/cegagit/cegagit.github.io/tree/main/mycode/python/tests)  
 [Live demo](https://mybinder.org/v2/gh/cegagit/cegagit.github.io/HEAD?labpath=docs%2Fdemos%2Fpython%2Fjupyter1%2Fjupyter1.ipynb)
-- Pyodide tests  
-[Live demo](/demos/python/pyodide.html)
+- Pyodide Console  
+[Live demo](/demos/python/pyodide/console.html)
+- Pyodide Test 1  
+[Live demo](/demos/python/pyodide/test1.html)
 
 
 - Project 4
