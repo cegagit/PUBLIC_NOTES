@@ -77,12 +77,13 @@ Tareas realizadas como Administrador de redes:
 [Info](/dshproject)  
 [Source code](https://github.com/cegagit/cegagit.github.io/tree/main/mycode/javascript/datasciencehelper)  
 [Live demo](/demos/javascript/datasciencehelper/datasciencehelper.html)
-- Jupiter 1
+- Jupiter 1  
 [Info](/test1)  
 [Source code](https://github.com/cegagit/cegagit.github.io/tree/main/mycode/python/tests)  
 [Live demo](https://mybinder.org/v2/gh/cegagit/cegagit.github.io/HEAD?labpath=docs%2Fdemos%2Fpython%2Fjupyter1%2Fjupyter1.ipynb)
-- Project 3
-[Live demo](https://notebooks.gesis.org/binder/jupyter/user/cegagit-cegagit.github.io-p5kqam4r/doc/tree/docs/demos/python/jupyter1/jupyter1.ipynb)
-- 
+- Pyodide tests  
+[Live demo](/demos/python/pyodide.html)
+
+
 - Project 4
 - Project 5
