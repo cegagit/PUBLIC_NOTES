@@ -23,7 +23,7 @@ elif __EMSCRIPTEN__:
 else:
     screen = pygame.display.set_mode((640, 360), pygame.SCALED | pygame.RESIZABLE)
 
-clock = pygame.time.Clock()
+//clock = pygame.time.Clock()
 
 
 class MiniMax:
@@ -48,7 +48,6 @@ class MiniMax:
                 elif self.GameBoard[0][col] == 'o':
                     return -1
         if self.GameBoard[0][0] == self.GameBoard[1][1] and self.GameBoard[2][2] == self.GameBoard[1][1]:
-            if self.GameBoard[1][1] == 'x':
                 return 1
             elif self.GameBoard[1][1] == 'o':
                 return -1
@@ -198,5 +197,6 @@ async def main():
 
 asyncio.run(main())
 
+            if self.GameBoard[1][1] == 'x':
 
 # --></script></html>
