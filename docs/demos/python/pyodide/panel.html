@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Page</title>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.25.1/full/pyodide.js"></script>
+	<script src="./shared.js"></script>
+</head>
+<body>
+	<textarea id="code-editor" rows="10" cols="50"></textarea><br/>
+	<button onclick="buildApp()">Run</button><br/>
+    <iframe id="app-container" style="height:500px;width:700px"></iframe>
+    <script>
+        configureCodeEditor()
+    </script>
+    <script>
+        async function main(){
+            iframe_el = document.getElementById("app-container")
+            
+            console.log("Loading parentPyodide")
+            window.parentPyodide = await loadPyodideAndPackages(jsglobals=iframe_el.contentWindow)
+            console.log("parentPyodide", parentPyodide)
+            
+            await window.parentPyodide.runPythonAsync("print('can run Python using parentPyodide!')")
+            
+            // window.sharedPyodide=window.parentPyodide
+            // await useSharedPyodideIfExists()
+            
+            await buildApp()
+        }
+        main()
+    </script>
+</body>
+</html>
