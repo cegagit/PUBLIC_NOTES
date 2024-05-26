@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<!-- TODO
+- ALARMS: Show current alarms
+- ALARMS: by date and time
+- ALARMS: Pomodoro, work i1, rest i2
+- CASE: Upper the first letter of every line
+- CASE: Upper the first letter of every word
+- CASE: Every letter to uppercase
+- CONV: CSV to JSON
+- CONV: JSON to CSV
+- CONV: JSON to XML
+- CONV: XML to JSON
+- CSV: Swap rows by columns
+- DEL: Remove spaces & dots at begin
+- DEL: Remove i1 chars at end
+- DEL: Remove i1 lines every i2 lines
+- DEL: Remove hyperlinks
+- DEL: Remove all punctuation .,;:@
+- DEL: Remove stopwords (list entered on auxiliar p3)
+- DEL: Delete lines with a string
+- DEL: Delete lines without a string
+- ENC: Base64 encode
+- ENC: Base64 decode
+- ENC: Generate md5 hash
+- EXEC: Evaluate JS script
+- GAMES: Tic-Tac-Toe
+- GAMES: 4 in row
+- GAMES: Guess the location
+- GAMES: Guess the math
+- GAMES: Memory game
+- GAMES: Chess
+- GEN: i1 blank lines
+- GEN: i1 lines with the word i2 on each
+- GEN: Generate i1 random words of i2 chars
+- GEN: Generate random pass of i1 chars and i2 groups
+- GEN: Add i1 text at begin
+- GEN: Add i1 text at end
+- GEN: Insert numbers at end
+- MATH: Full calculator
+- MATH: Sum field i1
+- MATH: Sum all fields
+- RENDER: to graphical markdown
+- RENDER: to graphical HTML
+- RENDER: i1 & i2 fields to svg line chart
+- RENDER: Word cloud chart
+- S&R: S&R with special chars
+- S&R: Replace Nth char of every line with another
+- S&R: Replace all dash & under with spaces
+- S&R: Replace all spaces with under
+- S&R: Output lines with a string
+- S&R: Output lines without a string
+- S&R: Extract ASCII <127
+- S&R: Extract ASCII letters & nums
+- SCRAP: YF Quote
+- SCRAP: Headlines
+- SCRAP: Google Search
+- SQL: Select * where field i1 = i2
+- SQL: Select * where field i1 != i2
+- SQL: Select * where field i1 > i2
+- SQL: Select * where field i1 < i2
+- SQL: Update i2 with i1 where field i2 = i3
+- SQL: Delete * where field i1 = i2
+- SQL: Group by i1
+- SQL: Join by i1 and i2 from aux input
+- STAT: Calculate text statistics
+- STAT: Calculate words occurrences
+- STORE: List all slots and names
+- STORE: List slots beginning with i2 name
+- STORE: Store to next free slot with i2 name
+- STORE: Replace existing i1 slot with new i2 name
+- STORE: Retrieve from local i1 slot
+- WEBSTORE: List all pastebin slots and names from i1 url
+- WEBSTORE: List pastebin slots beginning with i2 name from i1 url
+- WEBSTORE: Store to new pastebin and update index
+- WEBSTORE: Replace existing pastebin i1 slot with new i2 name
+- WEBSTORE: Retrieve from pastebin i1 slot
+- WEBSTORE: Github storage ???
+- WEBSTORE: Webdav storage ???
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TEXT PROCESSING</title>
+<style>
+
+	
+.container--tabs {
+	margin: 2rem;
+
+	.nav-tabs {
+		float: left;
+		width: 100%;
+		margin: 0;
+		list-style-type: none;
+		border-bottom: 1px solid #ddd;
+
+		> li {
+			float: left;
+			margin-bottom: -1px;
+
+			> a {
+        color: #555;
+				float: left;
+				margin-right: 2px;
+				line-height: 1.42857143;
+				padding: 10px;
+				border: 1px solid transparent;
+				border-radius: 4px 4px 0 0;
+
+				&:hover {
+					border-color: #eee #eee #ddd;
+				}
+			}
+
+			&.active {
+				> a,
+				> a:hover,
+				> a:focus {
+					color: #500;
+					cursor: default;
+					background-color: #fff;
+					border: 1px solid #ddd;
+					border-bottom-color: transparent;
+				}
+			}
+		}
+	}
+
+	.tab-content {
+		float: left;
+		width: 100%;
+
+		> .tab-pane {
+			display: none;
+
+			&.active {
+				display: block;
+				padding: 2.5% 3.5%;
+				background-color: #efefef;
+			}
+		}
+
+		> .active {
+			display: block;
+		}
+	}
+
+}
+
+
+
+
+  body, textarea, button {
+      background-color: black;
+      color: yellow;
+      font-family: Arial, sans-serif;
+  }
+  .textarea-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .textarea-container textarea {
+    width: 50%;
+    //height: 300px;
+    padding: 1px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  .char-count-label {
+    font-size: 14px;
+    color: white;
+  }
+  #outputTextDiv {
+    font-size: 27px; /* Initial font size */
+    color: gray; /* Initial font color */
+    border: 1px solid #ccc; /* Add a border to mimic the textarea */
+    padding: 5px; /* Add some padding for better visual appearance */
+    width: 880px; /* Set a fixed width */
+    height: 920px; /* Set a fixed height */
+    overflow: auto; /* Add scrollbars if the content exceeds the div size */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    resize: none; /* Prevent resizing */
+    background-color: #000000; /* Set a pitch black background color */
+			 font-family: Lucida Console, monospace; /* Initial font type */            
+   }
+  #alarmLabel {
+     display: none;
+     font-weight: bold;
+     color: red;
+   }     
+</style>
+</head>
+<body>
+
+
+	
+<div class="container--tabs">
+	<section class="row">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="#tab-1">BOOKMARKS</a></li>
+			<li class=""><a href="#tab-2">E.T.L.</a></li>
+			<li class=""><a href="#tab-3">READER</a></li>
+			<li class=""><a href="#tab-4">FULLEDIT</a></li>
+			<li class=""><a href="#tab-5">CALC</a></li>
+			<li class=""><a href="#tab-6">ASSIST</a></li>
+			<li class=""><a href="#tab-7">GAMES</a></li>
+
+		</ul>
+		<div class="tab-content">
+			<div id="tab-1" class="tab-pane active"> 
+				<span class="glyphicon glyphicon-leaf glyphicon--home--feature two columns text-center"></span>
+				<span class="col-md-10">
+					<h3>Tab 1</h3>
+					<p>Bookmarks manager</p>
+
+
+				</span>
+			</div> 
+			<div id="tab-2" class="tab-pane">
+				<span class="glyphicon glyphicon-fire glyphicon--home--feature two columns text-center"></span>
+				<span class="col-md-10">
+	 <div class="textarea-container">
+    <textarea id="textInput" rows="15" cols="50"></textarea>
+    <textarea id="tempInput1" rows="15" cols="50"></textarea>                           	 </div>
+  <div class="textarea-container">
+    <textarea id="outputText" rows="15" cols="50"></textarea>    
+    <textarea id="tempOutput1" rows="15" cols="50"></textarea>
+  </div>
+  <label class="char-count-label" id="charCountLabel">Total Chars: 0</label>
+  <br>
+  <label for="varInput1">i1:</label>
+  <input type="text" id="varInput1" min="1" value="8">
+  <label for="varInput2">i2:</label>
+  <input type="text" id="varInput2" min="1" value="8">  
+  <button onclick="text2BM()">text2BM</button>
+  <button onclick="times2BM()">times2BM</button>
+  <button onclick="swapText()">Swap p1&p2</button>
+  <button onclick="addAscendingNumbers()">InsNums</button>
+  <button onclick="removeCharacters()">Del i1 @begin</button>
+  <button onclick="searchReplace()">Src i1 Rep i2</button>  
+  <button onclick="convertToLowercase()">To lowercase</button>
+  <button onclick="removeSpacesAndDots()">Del Spaces+Dots @end</button>
+  <button onclick="removeCharactersAtEnd()">Del i1 @end</button>
+  <button onclick="BM2text()">BM2text</button>
+  <button onclick="countCharacters()">Count chars</button>
+  <button onclick="clearText()">Clear p1 & p2</button>
+  <button onclick="sumAmounts()">Sum Amounts</button>
+  <button onclick="splitTextIntoChunks()">Split in i1 chunks</button>
+  <button onclick="downloadOutput()">Download</button>
+  <button onclick="toReader()">p2 to Reader</button>
+  <button onclick="fun2encrypt()">Encrypt with i2</button>
+  <button onclick="fun2decrypt()">Decrypt with i2</button>    
+  <button onclick="setAlarm()">Alarm every i1</button>
+  <button onclick="showascii()">ASCII-437</button>
+  <button onclick="beep()">Beep</button>
+		<label for="functionSelect"></label>
+    <select id="functionSelect" name="functionselect">
+        	<option value="FUN1">Copy only field i1 to Output</option>
+        	<option value="FUN2">Remove field i1 and copy others to Output</option>
+        	<option value="FUN3">Add Auxiliar Data as a New Field</option>
+							 <option value="FUN4">Map aux multiple lines to single input line</option>
+								<option value="FUN5">Sort ASC by field i1</option>
+    				 <option value="FUN6">Sort DESC by field i1</option>
+								<option value="FUN7">Sort ASC ABS by field i1</option>
+    				 <option value="FUN8">Sort DESC ABS by field i1</option>    				 
+    </select>	
+    <button id="csvSubmit" onclick="executeCsvFunction()">Exe Csv Fun</button>
+      
+  <div>Next in: <span id="alarmCounter">0</span></div>
+  <div id="alarmLabel"> --- Alarm Triggered! ---</div><br>
+  <button onclick="decreaseOutputWidth()">Decrease Output Width</button>
+  <button onclick="increaseOutputWidth()">Increase Output Width</button>
+  <button onclick="decreaseOutputHeight()">Decrease Output Height</button>
+  <button onclick="increaseOutputHeight()">Increase Output Height</button><br>
+  <button onclick="decreaseFontSize()">Decr Font</button>
+  <button onclick="increaseFontSize()">Incr Font</button>
+  <button onclick="changeFontColorPrevious()">Prev Color</button>
+  <button onclick="changeFontColorNext()">Next Color</button>
+  <button onclick="changeFontType()">Change Font Type</button><br>
+  <div id="outputTextDiv" contenteditable></div><br><br>
+  <label id=" CurrentFontLabel"></label><br><br>
+					
+				</span>
+			</div>
+			<div id="tab-3" class="tab-pane">
+				<span class="glyphicon glyphicon-tint glyphicon--home--feature two columns text-center"></span>
+				<span class="col-md-10">
+					<h3>Tab 3 - READER</h3>
+					<p>Tab 3 contents</p>
+				</span>
+			</div>
+			<div id="tab-4" class="tab-pane">
+				<span class="glyphicon glyphicon-tint glyphicon--home--feature two columns text-center"></span>
+				<span class="col-md-10">
+					<h3>Tab 4</h3>
+					<p>Tab 4 contents</p>
+				</span>
+			</div>
+			<div id="tab-5" class="tab-pane">
+				<span class="glyphicon glyphicon-tint glyphicon--home--feature two columns text-center"></span>
+				<span class="col-md-10">
+					<h3>Tab 5</h3>
+					<p>Tab 5 contents</p>
+				</span>
+			</div>
+			<div id="tab-6" class="tab-pane">
+				<span class="glyphicon glyphicon-tint glyphicon--home--feature two columns text-center"></span>
+				<span class="col-md-10">
+					<h3>Tab 6</h3>
+					<p>Tab 6 contents</p>
+				</span>
+			</div>
+			<div id="tab-7" class="tab-pane">
+				<span class="glyphicon glyphicon-tint glyphicon--home--feature two columns text-center"></span>
+				<span class="col-md-10">
+					<h3>Tab 7</h3>
+					<p>Tab 7 contents</p>
+				</span>
+			</div>
+
+
+
+
+
+
+		</div>
+	</section>
+</div>
+
+	
+
+
+
+
+
+
+
+  <script>
+  
+  
+ window.addEventListener("load", function() {
+	// store tabs variable
+	var myTabs = document.querySelectorAll("ul.nav-tabs > li");
+  function myTabClicks(tabClickEvent) {
+		for (var i = 0; i < myTabs.length; i++) {
+			myTabs[i].classList.remove("active");
+		}
+		var clickedTab = tabClickEvent.currentTarget;
+		clickedTab.classList.add("active");
+		tabClickEvent.preventDefault();
+		var myContentPanes = document.querySelectorAll(".tab-pane");
+		for (i = 0; i < myContentPanes.length; i++) {
+			myContentPanes[i].classList.remove("active");
+		}
+		var anchorReference = tabClickEvent.target;
+		var activePaneId = anchorReference.getAttribute("href");
+		var activePane = document.querySelector(activePaneId);
+		activePane.classList.add("active");
+	}
+	for (i = 0; i < myTabs.length; i++) {
+		myTabs[i].addEventListener("click", myTabClicks)
+	}
+});
+
+ 
+  
+    const Safe = new class {
+      #key = '';
+      #encoder = new TextEncoder();
+      #decoder = new TextDecoder();
+      #buffer(string) {
+        const bytes = new Uint8Array(string.length);
+        [...string].forEach((c, i) => bytes[i] = c.charCodeAt(0));
+        return bytes;
+      }
+      async open(password) {
+        this.#key = await crypto.subtle.digest({
+          name: 'SHA-256'
+        }, this.#encoder.encode(password)).then(result => crypto.subtle.importKey('raw', result, {
+          name: 'AES-CBC'
+        }, true, ['encrypt', 'decrypt']));
+      }
+      async encrypt(string) {
+        const iv = crypto.getRandomValues(new Uint8Array(16));
+        const result = await crypto.subtle.encrypt({
+            name: 'AES-CBC',
+            iv
+        }, this.#key, this.#encoder.encode(string));
+        return new Promise(resolve => {
+            const reader = new FileReader();
+            reader.onload = () => resolve(reader.result.split(',')[1]);
+            reader.readAsDataURL(new Blob([iv, result], {
+                type: 'text/enc'
+            }));
+        });
+
+      }        
+      async decrypt(string) {
+        string = string.replace('data:application/octet-binary;base64,', '');
+        const iv = crypto.getRandomValues(new Uint8Array(16));
+        const result = await crypto.subtle.decrypt({
+          name: 'AES-CBC',
+          iv
+        }, this.#key, this.#buffer(atob(string)));
+        const ab = (new Uint8Array(result)).subarray(16);
+        return this.#decoder.decode(ab);
+      }
+    }    
+    const colors = ['gray', 'green', 'orange', 'blue', 'yellow', 'pink', 'brown', 'magenta', 'white'];
+    let currentColorIndex = 0;
+    const fontTypes = ['Arial, sans-serif', 'Verdana, sans-serif', 'Tahoma, sans-serif', 'Trebuchet MS, sans-serif', 'Times New Roman, serif', 'Georgia, serif', 'Garamond, serif', 'Courier New, monospace', 'Lucida Sans, sans-serif', 'Lucida Console, monospace', 'Palatino, serif'];
+    let currentFontTypeIndex = 9;
+    let alarmInterval;
+    let alarmCounter;
+    let alarmCounterInterval;            
+
+    function executeCsvFunction() {
+        var textInput = document.getElementById('textInput').value;
+        var varInput1Value = parseInt(document.getElementById('varInput1').value);
+        var outputArea = document.getElementById('outputText');
+        var functionSelectValue = document.getElementById('functionSelect').value;
+        switch(functionSelectValue) {
+            case 'FUN1': 
+                var lines = textInput.split('\n');
+                var output = '';
+                for(var i=0; i< lines.length; i++){
+                    var fields = lines[i].split(',');
+                    if(fields.length > varInput1Value - 1){
+                        output += fields[varInput1Value - 1] + '\n';
+                    }
+                }
+                outputArea.value = output.trim();
+                break;
+            case 'FUN2':
+            				var lines = textInput.split('\n');
+                var output = '';
+                for(var i=0; i< lines.length; i++){
+                    var fields = lines[i].split(',');
+                    if(fields.length > varInput1Value - 1){
+																							fields.splice(varInput1Value - 1, 1);
+                    }
+                    output += fields.join(',') + '\n';
+                }
+                outputArea.value = output;
+                break;
+            case 'FUN3':
+                var lines = textInput.split('\n');
+                var tempInput1 = document.getElementById('tempInput1').value;
+                var tempInput1Lines = tempInput1.split('\n');
+                var output = '';
+                for(var i=0; i< lines.length; i++){
+                    var fields = lines[i].split(',');
+                    if(fields.length > 0){
+                        output += fields.join(',') + ',' + tempInput1Lines[i] + '\n';
+                    }
+                 }
+                 outputArea.value = output.trim();
+                 break;
+            case 'FUN4':
+															var input1Text = document.getElementById("textInput").value;
+															var tempInput1Text = document.getElementById("tempInput1").value;
+															var auxiliarLines = tempInput1Text.split("\n");
+															var resultText = auxiliarLines.map(line => input1Text.replace(/$/, ` ${line}`)).join("\n");
+															document.getElementById("outputText").value = resultText;
+															break;
+    								case 'FUN5':
+      										var csvText = document.getElementById("textInput").value;
+      										var fieldNum = parseInt(document.getElementById("varInput1").value);
+      										var sortedRows = csvText.split("\n").sort((a, b) => {
+        								var aValue = a.split(",")[fieldNum - 1];
+        								var bValue = b.split(",")[fieldNum - 1];
+        								return aValue.localeCompare(bValue);
+      										});
+      										document.getElementById("outputText").value = sortedRows.join("\n");
+    												break;
+    								case 'FUN6':
+									      var csvText = document.getElementById("textInput").value;
+									      var fieldNum = parseInt(document.getElementById("varInput1").value);
+	      									var sortedRows = csvText.split("\n").sort((a, b) => {
+	        									var aValue = a.split(",")[fieldNum - 1];
+	        									var bValue = b.split(",")[fieldNum - 1];
+	        									return bValue.localeCompare(aValue);
+	      									});
+	      									document.getElementById("outputText").value = sortedRows.join("\n");
+	      									break;
+    								case 'FUN7':    											
+													  var csvText = document.getElementById("textInput").value;
+													  var fieldNum = parseInt(document.getElementById("varInput1").value);
+													  var sortedRows = csvText.split("\n").sort((a, b) => {
+													    var aValue = a.split(",")[fieldNum - 1];
+													    var bValue = b.split(",")[fieldNum - 1];
+													    if (aValue === "") return -1;
+													    if (bValue === "") return 1;
+													    return Math.abs(parseFloat(aValue)) - Math.abs(parseFloat(bValue));
+													  });
+													  document.getElementById("outputText").value = sortedRows.join("\n");    								
+    												break;
+    								case 'FUN8':
+													  var csvText = document.getElementById("textInput").value;
+													  var fieldNum = parseInt(document.getElementById("varInput1").value);
+													  var sortedRows = csvText.split("\n").sort((a, b) => {
+													    var aValue = a.split(",")[fieldNum - 1];
+													    var bValue = b.split(",")[fieldNum - 1];
+													    if (aValue === "") return 1;
+													    if (bValue === "") return -1;
+													    return Math.abs(parseFloat(bValue)) - Math.abs(parseFloat(aValue));
+													  });
+													  document.getElementById("outputText").value = sortedRows.join("\n");
+													  	break;
+
+        }
+    }			
+
+    function text2BM() {
+      var inputText = document.getElementById('textInput').value;
+      var a = inputText.replace(/#/g, 'HTG'); // htag & HT-G
+      var b = a.replace(/<br>/g, 'BRBR'); // <b-r> & BR-BR
+      var c = b.split('\n');
+      var output = '';
+      c.forEach(function(line) {
+        output += '<br>' + line + '\n'; // <b-r>
+      });
+      document.getElementById('outputText').value = output;
+      countCharacters();
+    }
+
+    function times2BM() {      
+      var inputText = document.getElementById('textInput').value;
+      var charCount = parseInt(document.getElementById('varInput1').value);
+      var lines = inputText.split('\n');
+      var output = '';
+      lines.forEach(function(line) {
+        if (line.length > charCount) {
+          output += line.substring(charCount) + '\n';
+        } else {
+          output += '\n';
+        }
+      });
+      var lines2 = output.split('\n');
+      var output2 = '';
+      var count = 1;
+      lines2.forEach(function(line) {
+        var trimmedLine = line.replace(/[ .]+$/g, '');
+        output2 += '<br>' + count + '. ' + trimmedLine + '\n'; // <b-r>
+        count++;
+      });
+      document.getElementById('outputText').value = output2;
+    }
+
+    function swapText() {
+      var inputText = document.getElementById('textInput').value;
+      var outputText = document.getElementById('outputText').value;
+      document.getElementById('textInput').value = outputText;
+      document.getElementById('outputText').value = inputText;
+    }
+
+    function addAscendingNumbers() {
+      var inputText = document.getElementById('textInput').value;
+      var lines = inputText.split('\n');
+      var output = '';
+      var count = 1;
+      lines.forEach(function(line) {
+        output += count + '. ' + line + '\n';
+        count++;
+      });
+
+      document.getElementById('outputText').value = output;
+    }
+
+    function removeCharacters() {
+      var inputText = document.getElementById('textInput').value;
+      var charCount = parseInt(document.getElementById('varInput1').value);
+      var lines = inputText.split('\n');
+      var output = '';
+      lines.forEach(function(line) {
+        if (line.length > charCount) {
+          output += line.substring(charCount) + '\n';
+        } else {
+          output += '\n';
+        }
+      });
+      document.getElementById('outputText').value = output;
+    }
+
+				function searchReplace() {			
+						var inputText = document.getElementById('textInput').value;
+						var inputSrc = document.getElementById('varInput1').value;
+						var inputRep = document.getElementById('varInput2').value;
+      var output = inputText.replace(new RegExp(inputSrc, 'g'), inputRep);
+      
+      document.getElementById('outputText').value = output;
+				}
+				
+    function convertToLowercase() {
+      var inputText = document.getElementById('textInput').value;
+      var outputText = inputText.toLowerCase();
+      document.getElementById('outputText').value = outputText;
+    }
+
+    function removeSpacesAndDots() {
+      var inputText = document.getElementById('textInput').value;
+      var lines = inputText.split('\n');
+      var output = '';
+      lines.forEach(function(line) {
+        var trimmedLine = line.replace(/[ .]+$/g, '');
+        output += trimmedLine + '\n';
+      });
+      document.getElementById('outputText').value = output;
+    }
+
+    function removeCharactersAtEnd() {
+      var inputText = document.getElementById('textInput').value;
+      var charCount = parseInt(document.getElementById('varInput1').value);
+      var lines = inputText.split('\n');
+      var output = '';
+      lines.forEach(function(line) {
+        if (line.length > charCount) {
+          output += line.slice(0, -charCount) + '\n';
+        } else {
+          output += '\n';
+        }
+      });
+      document.getElementById('outputText').value = output;
+    }
+
+    function BM2text() {
+      var inputText = document.getElementById('textInput').value;
+      var a = inputText.replace(/<br>/g, '\n'); // <b-r>
+      var b = a.replace(/HTG/g, '#'); // HT-G & htag
+      var output = b.replace(/BRBR/g, '<br>'); // BR-BR & <b-r>
+      document.getElementById('outputText').value = output;
+    }
+
+    function countCharacters() {
+      var inputText = document.getElementById('outputText').value;
+      var charCount = inputText.length;
+      document.getElementById('charCountLabel').textContent = 'Total Chars: ' + charCount;
+    }
+
+    function clearText() {
+      document.getElementById('textInput').value = '';
+      document.getElementById('outputText').value = '';
+    }
+
+    function sumAmounts() {
+      var inputText = document.getElementById('textInput').value;
+      var lines = inputText.split('\n');
+      var sum = 0;
+      lines.forEach(function(line) {
+        var match = line.match(/=\s*(\d+)/);
+        if (match) {
+          sum += parseInt(match[1]);
+        }
+      });
+      document.getElementById('outputText').value = 'Total Sum: ' + sum;
+    }
+
+    function splitTextIntoChunks() {
+      var inputText = document.getElementById('textInput').value;
+      var chunkSize = parseInt(document.getElementById('varInput1').value);
+      var outputText = document.getElementById('outputText');
+      if (!Number.isInteger(parseInt(chunkSize))) {
+          alert("Please enter a valid integer for chunk size.");
+          return;
+      }
+      var chunks = [];
+      for (var i = 0; i < inputText.length; i += parseInt(chunkSize)) {
+           chunks.push(inputText.substring(i, i + parseInt(chunkSize)));
+      }
+      outputText.value = chunks.join("\n---------------------------------\n");
+    }
+
+    function downloadOutput() {
+      var outputText = document.getElementById('outputText').value;
+      var blob = new Blob([outputText], { type: 'text/plain' });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      a.href = url;
+      a.download = 'output.txt';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
+ 
+    function toReader() {
+      var inputText = document.getElementById('outputText').value;
+      var outputText = document.getElementById('outputTextDiv').innerText;
+      document.getElementById('outputText').value = outputText;
+      document.getElementById('outputTextDiv').innerText = inputText;
+    }    
+    
+    function decreaseFontSize() {
+        const outputText = document.getElementById("outputTextDiv");
+        const currentSize = parseFloat(window.getComputedStyle(outputText, null).getPropertyValue('font-size'));
+        outputText.style.fontSize = (currentSize - 2) + "px";
+    }
+
+    function increaseFontSize() {
+        const outputText = document.getElementById("outputTextDiv");
+        const currentSize = parseFloat(window.getComputedStyle(outputText, null).getPropertyValue('font-size'));
+        outputText.style.fontSize = (currentSize + 2) + "px";
+    }
+
+    function changeFontColorPrevious() {
+        const outputText = document.getElementById("outputTextDiv");
+        currentColorIndex = (currentColorIndex - 1 + colors.length) % colors.length;
+        outputText.style.color = colors[currentColorIndex];
+    }
+
+    function changeFontColorNext() {
+        const outputText = document.getElementById("outputTextDiv");
+        currentColorIndex = (currentColorIndex + 1) % colors.length;
+        outputText.style.color = colors[currentColorIndex];
+    }
+
+    function changeFontType() {
+        const outputText = document.getElementById("outputTextDiv");
+        currentFontTypeIndex = (currentFontTypeIndex + 1) % fontTypes.length;
+        outputText.style.fontFamily = fontTypes[currentFontTypeIndex];
+        updateCurrentFontLabel(fontTypes[currentFontTypeIndex]);
+    }
+
+    function decreaseOutputWidth() {
+        const outputText = document.getElementById("outputTextDiv");
+        const currentWidth = parseFloat(window.getComputedStyle(outputText, null).getPropertyValue('width'));
+        outputText.style.width = (currentWidth - 40) + "px";
+    }
+
+    function increaseOutputWidth() {
+        const outputText = document.getElementById("outputTextDiv");
+        const currentWidth = parseFloat(window.getComputedStyle(outputText, null).getPropertyValue('width'));
+        outputText.style.width = (currentWidth + 40) + "px";
+    }
+
+    function decreaseOutputHeight() {
+        const outputText = document.getElementById("outputTextDiv");
+        const currentHeight = parseFloat(window.getComputedStyle(outputText, null).getPropertyValue('height'));
+        outputText.style.height = (currentHeight - 40) + "px";
+    }
+
+    function increaseOutputHeight() {
+        const outputText = document.getElementById("outputTextDiv");
+        const currentHeight = parseFloat(window.getComputedStyle(outputText, null).getPropertyValue('height'));
+        outputText.style.height = (currentHeight + 40) + "px";
+    } 
+
+    function updateCurrentFontLabel(fontName) {
+        const currentFontLabel = document.getElementById("currentFontLabel");
+        currentFontLabel.innerText = `Current Font: ${fontName}`;
+    }
+
+    function setAlarm() {
+      var intervalInput = parseInt(document.getElementById('varInput1').value);      
+      var interval = intervalInput * 60;
+      var counterElement = document.getElementById('alarmCounter');
+      var alarmLabel = document.getElementById('alarmLabel');
+      if (alarmInterval) {
+        clearInterval(alarmInterval);
+        clearInterval(alarmCounterInterval);
+      }
+      counterElement.textContent = interval;
+      alarmInterval = setTimeout(function() {
+        var _beep = new Audio();
+        _beep.src = "data:audio/mp3;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU2LjI1LjEwMQAAAAAAAAAAAAAA/+NAwAAAAAAAAAAAAFhpbmcAAAAPAAAAAwAAA3YAlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaW8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw////////////////////////////////////////////AAAAAExhdmYAAAAAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAN2UrY2LgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/jYMQAEvgiwl9DAAAAO1ALSi19XgYG7wIAAAJOD5R0HygIAmD5+sEHLB94gBAEP8vKAgGP/BwMf+D4Pgh/DAPg+D5//y4f///8QBhMQBgEAfB8HwfAgIAgAHAGCFAj1fYUCZyIbThYFExkefOCo8Y7JxiQ0mGVaHKwwGCtGCUkY9OCugoFQwDKqmHQiUCxRAKOh4MjJFAnTkq6QqFGavRpYUCmMxpZnGXJa0xiJcTGZb1gJjwOJDJgoUJG5QQuDAsypiumkp5TUjrOobR2liwoGBf/X1nChmipnKVtSmMNQDGitG1fT/JhR+gYdCvy36lTrxCVV8Paaz1otLndT2fZuOMp3VpatmVR3LePP/8bSQpmhQZECqWsFeJxoepX9dbfHS13/////aysppUblm//8t7p2Ez7xKD/42DE4E5z9pr/nNkRw6bhdiCAZVVSktxunhxhH//4xF+bn4//6//3jEvylMM2K9XmWSn3ah1L2MqVIjmNlJtpQux1n3ajA0ZnFSu5EpX////uGatn///////1r/pYabq0mKT//TRyTEFNRTMuOTkuNaqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq/+MQxNIAAANIAcAAAKqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqg==";
+        _beep.play();
+        alarmLabel.style.display = 'block';
+        setTimeout(function() {
+          alarmLabel.style.display = 'none';
+          _beep.play();
+        }, 2000);
+        _beep.play();
+        setAlarm();
+      }, interval * 1000);
+
+      alarmCounterInterval = setInterval(function() {
+        counterElement.textContent = parseInt(counterElement.textContent) - 1;
+        if (counterElement.textContent === '0') {
+          clearInterval(alarmCounterInterval);
+        }
+      }, 1000);
+    }
+
+    function beep() {
+      var _beep = new Audio();
+        _beep.src = "data:audio/mp3;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU2LjI1LjEwMQAAAAAAAAAAAAAA/+NAwAAAAAAAAAAAAFhpbmcAAAAPAAAAAwAAA3YAlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaW8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw////////////////////////////////////////////AAAAAExhdmYAAAAAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAN2UrY2LgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/jYMQAEvgiwl9DAAAAO1ALSi19XgYG7wIAAAJOD5R0HygIAmD5+sEHLB94gBAEP8vKAgGP/BwMf+D4Pgh/DAPg+D5//y4f///8QBhMQBgEAfB8HwfAgIAgAHAGCFAj1fYUCZyIbThYFExkefOCo8Y7JxiQ0mGVaHKwwGCtGCUkY9OCugoFQwDKqmHQiUCxRAKOh4MjJFAnTkq6QqFGavRpYUCmMxpZnGXJa0xiJcTGZb1gJjwOJDJgoUJG5QQuDAsypiumkp5TUjrOobR2liwoGBf/X1nChmipnKVtSmMNQDGitG1fT/JhR+gYdCvy36lTrxCVV8Paaz1otLndT2fZuOMp3VpatmVR3LePP/8bSQpmhQZECqWsFeJxoepX9dbfHS13/////aysppUblm//8t7p2Ez7xKD/42DE4E5z9pr/nNkRw6bhdiCAZVVSktxunhxhH//4xF+bn4//6//3jEvylMM2K9XmWSn3ah1L2MqVIjmNlJtpQux1n3ajA0ZnFSu5EpX////uGatn///////1r/pYabq0mKT//TRyTEFNRTMuOTkuNaqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq/+MQxNIAAANIAcAAAKqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqg==";
+        _beep.play();
+    }
+
+    async function fun2encrypt() {
+      var inputText = document.getElementById('textInput').value;
+      var inputPwd = document.getElementById('varInput2').value;
+      var outputText = document.getElementById('outputText');
+      try {
+        await Safe.open(inputPwd);
+        var encryptedMessage = await Safe.encrypt(inputText);
+        outputText.value = 'data:application/octet-binary;base64,' + encryptedMessage;
+      } catch (error) {
+        outputText.value = 'ERROR: ' + error.message;
+      }    
+    }
+
+    async function fun2decrypt() {
+      var inputText = document.getElementById('textInput').value;
+      var inputPwd = document.getElementById('varInput2').value;
+      var outputText = document.getElementById('outputText');
+      try {
+        await Safe.open(inputPwd);
+        const decryptedMessage = await Safe.decrypt(inputText);
+        outputText.value = decryptedMessage;
+      } catch (error) {
+        outputText.value = 'Wrong Password !!!: ' + error.message;
+      }
+    }
+
+    function showascii() {
+      let cp437Table = '';
+      const cp437Chars = [
+          ['\u0000', 0], ['\u0001', 1], ['\u0002', 2], ['\u0003', 3], ['\u0004', 4], ['\u0005', 5], ['\u0006', 6], ['\u0007', 7], ['\u0008', 8], ['\t', 9], ['\n', 10], ['\u000B', 11], ['\f', 12], ['\r', 13], ['\u000E', 14], ['\u000F', 15], ['\u0010', 16], ['\u0011', 17], ['\u0012', 18], ['\u0013', 19], ['\u0014', 20], ['\u0015', 21], ['\u0016', 22], ['\u0017', 23], ['\u0018', 24], ['\u0019', 25], ['\u001A', 26], ['\u001B', 27], ['\u001C', 28], ['\u001D', 29], ['\u001E', 30], ['\u001F', 31], [' ', 32], ['!', 33], ['"', 34], ['#', 35], ['$', 36], ['%', 37], ['&', 38], ['\'', 39], ['(', 40], [')', 41], ['*', 42], ['+', 43], [',', 44], ['-', 45], ['.', 46], ['/', 47], ['0', 48], ['1', 49], ['2', 50], ['3', 51], ['4', 52], ['5', 53], ['6', 54], ['7', 55], ['8', 56], ['9', 57], [':', 58], [';', 59], ['<', 60], ['=', 61], ['>', 62], ['?', 63], ['@', 64], ['A', 65], ['B', 66], ['C', 67], ['D', 68], ['E', 69], ['F', 70], ['G', 71], ['H', 72], ['I', 73], ['J', 74], ['K', 75], ['L', 76], ['M', 77], ['N', 78], ['O', 79], ['P', 80], ['Q', 81], ['R', 82], ['S', 83], ['T', 84], ['U', 85], ['V', 86], ['W', 87], ['X', 88], ['Y', 89], ['Z', 90], ['[', 91], ['\\', 92], [']', 93], ['^', 94], ['_', 95], ['`', 96], ['a', 97], ['b', 98], ['c', 99], ['d', 100], ['e', 101], ['f', 102], ['g', 103], ['h', 104], ['i', 105], ['j', 106], ['k', 107], ['l', 108], ['m', 109], ['n', 110], ['o', 111], ['p', 112], ['q', 113], ['r', 114], ['s', 115], ['t', 116], ['u', 117], ['v', 118], ['w', 119], ['x', 120], ['y', 121], ['z', 122], ['{', 123], ['|', 124], ['}', 125], ['~', 126], ['\u0007', 127], ['Ç', 128], ['ü', 129], ['é', 130], ['â', 131], ['ä', 132], ['à', 133], ['å', 134], ['ç', 135], ['ê', 136], ['ë', 137], ['è', 138], ['ï', 139], ['î', 140], ['ì', 141], ['Ä', 142], ['Å', 143], ['É', 144], ['æ', 145], ['Æ', 146], ['ô', 147], ['ö', 148], ['ò', 149], ['û', 150], ['ù', 151], ['ÿ', 152], ['Ö', 153], ['Ü', 154], ['¢', 155], ['£', 156], ['¥', 157], ['₧', 158], ['ƒ', 159], ['á', 160], ['í', 161], ['ó', 162], ['ú', 163], ['ñ', 164], ['Ñ', 165], ['ª', 166], ['º', 167], ['¿', 168], ['⌐', 169], ['¬', 170], ['½', 171], ['¼', 172], ['¡', 173], ['«', 174], ['»', 175], ['░', 176], ['▒', 177], ['▓', 178], ['│', 179], ['┤', 180], ['╡', 181], ['╢', 182], ['╖', 183], ['╕', 184], ['╣', 185], ['║', 186], ['╗', 187], ['╝', 188], ['╜', 189], ['╛', 190], ['┐', 191], ['└', 192], ['┴', 193], ['┬', 194], ['├', 195], ['─', 196], ['┼', 197], ['╞', 198], ['╟', 199], ['╚', 200], ['╔', 201], ['╩', 202], ['╦', 203], ['╠', 204], ['═', 205], ['╬', 206], ['╧', 207], ['╨', 208], ['╤', 209], ['╥', 210], ['╙', 211], ['╘', 212], ['╒', 213], ['╓', 214], ['╫', 215], ['╪', 216], ['┘', 217], ['┌', 218], ['█', 219], ['▄', 220], ['▌', 221], ['▐', 222], ['▀', 223], ['α', 224], ['ß', 225], ['Γ', 226], ['π', 227], ['Σ', 228], ['σ', 229], ['μ', 230], ['τ', 231], ['Φ', 232], ['Θ', 233], ['Ω', 234], ['δ', 235], ['∞', 236], ['φ', 237], ['ε', 238], ['∩', 239], ['≡', 240], ['±', 241], ['≥', 242], ['≤', 243], ['⌠', 244], ['⌡', 245], ['÷', 246], ['≈', 247], ['°', 248], ['∙', 249], ['·', 250], ['√', 251], ['ⁿ', 252], ['²', 253], ['■', 254], ['\u00A0', 255]
+      ];
+      for (const [char, code] of cp437Chars) {
+          cp437Table += `${char} (${code})  `;
+      }
+      outputText.value = cp437Table;
+     }
+
+    updateCurrentFontLabel(fontTypes[currentFontTypeIndex]);
+  </script>
+</body>
+</html>
