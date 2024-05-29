@@ -1,6 +1,0 @@
-## BODY NOTES
-
-
-
-
-#note
