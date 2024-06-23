@@ -24,6 +24,7 @@ https://www.cinecalidad.rs/pelicula/toy-story-3-online-descarga/
 
 PELIS SITES  
 https://www.cinecalidad.rs
+https://www.similarsites.com/site/peliculasdecine.net
 
 
 CHANNELS  
