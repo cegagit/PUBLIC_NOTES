@@ -25,6 +25,7 @@ https://www.cinecalidad.rs/pelicula/toy-story-2-1999-latino-online-descarga-grat
 https://www.cinecalidad.rs/pelicula/toy-story-3-online-descarga/
 
 PELIS SITES  
+https://ultrapelishd.net + safari
 https://www17.pelisplushd.to  
 https://www.cinecalidad.rs  
 https://www.similarsites.com/site/peliculasdecine.net  
